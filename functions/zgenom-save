@@ -58,6 +58,7 @@ function zgenom-save() {
     __zgenom_write "ZGENOM_PLUGINS=(${(@qOa)ZGENOM_PLUGINS})"
     if [[ -n $ZSH ]]; then
         __zgenom_write
+        __zgenom_write 'autoload -Uz is-at-least'
         __zgenom_write 'export ZSH="${ZGEN_DIR}/ohmyzsh/ohmyzsh/___"'
         __zgenom_write 'export ZSH_CACHE_DIR="${ZSH}/cache"'
     fi

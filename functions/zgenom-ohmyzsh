@@ -2,6 +2,7 @@
 
 function zgenom-oh-my-zsh() {
     local completion
+    autoload -Uz is-at-least
     export ZSH="${ZGEN_DIR}/ohmyzsh/ohmyzsh/___"
     export ZSH_CACHE_DIR="${ZSH}/cache"
     mkdir -p "${ZSH_CACHE_DIR}/completions"
