@@ -58,7 +58,8 @@ function zgenom-save() {
     __zgenom_write "ZGENOM_PLUGINS=(${(@qOa)ZGENOM_PLUGINS})"
     if [[ -n $ZSH ]]; then
         __zgenom_write
-        __zgenom_write "ZSH=${(q)ZSH}"
+        __zgenom_write 'export ZSH="${ZGEN_DIR}/ohmyzsh/ohmyzsh/___"'
+        __zgenom_write 'export ZSH_CACHE_DIR="${ZSH}/cache"'
     fi
     if [[ ${ZGEN_USE_PREZTO} == 1 && $#ZGEN_PREZTO_OPTIONS -gt 0 ]]; then
         __zgenom_write
